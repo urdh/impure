@@ -1,13 +1,13 @@
-> ##### ✋ Psst! Migrating from v1.x to v2.x? We got you. Check our [**migration guide**](https://github.com/rafaelrinaldi/pure/releases/tag/v2.0.0) and happy upgrading!
+# (im)pure [![travis-badge]][travis-link] ![fish-2.5] ![fish-2.6] ![fish-2.7.1] ![fish-3.0.0]
 
-# pure [![travis-badge]][travis-link] ![fish-2.5] ![fish-2.6] ![fish-2.7.1] ![fish-3.0.0] 
+> Reasonably good-looking Fish 🐟 prompt, forked from [`pure`](https://github.com/rafaelrinaldi/pure) and with influences from [`spacefish`](https://github.com/matchai/spacefish).
 
-> Pretty, minimal and fast Fish 🐟 prompt, ported from [`zsh`](https://github.com/sindresorhus/pure).
-
+<!--
 <div align=center>
   <a href="screenshot-dark.png" target=blank><img width=440 src=https://i.imgur.com/BHxUohR.png alt="Pure with dark colorscheme"></a>
   <a href="screenshot-light.png" target=blank><img width=440 src=https://i.imgur.com/qJdonqo.png alt="Pure with light colorscheme"></a>
 </div>
+-->
 
 ## Install
 
@@ -18,16 +18,14 @@
 Via [cURL](https://curl.haxx.se):
 
 ```sh
-# Download the installer to `/tmp`
 curl git.io/pure-fish --output /tmp/pure_installer.fish --location --silent
-# Source and trigger the installer
 source /tmp/pure_installer.fish; and install_pure
 ```
 
 ### [Fisher](https://github.com/jorgebucaran/fisher)
 
 ```fish
-fisher add rafaelrinaldi/pure
+fisher add urdh/impure
 ```
 
 ### [Oh My Fish!](https://github.com/oh-my-fish)
@@ -37,12 +35,10 @@ omf install pure
 ln -s $OMF_PATH/themes/pure/conf.d/pure.fish ~/.config/fish/conf.d/pure.fish
 ```
 
-:information_source: [why the symlink?](https://github.com/rafaelrinaldi/pure/wiki/Oh-My-Fish-not-currently-supporting-conf.d-snippets-in-plugins-and-themes)
-
 ### [Fundle](https://github.com/tuvistavie/fundle)
 
 ```fish
-fundle plugin rafaelrinaldi/pure;
+fundle plugin urdh/impure;
 fundle install;
 ```
 
@@ -63,6 +59,8 @@ fundle install;
 - Fine control over **colors** ;
 - Right prompt control.
 - Display `VI` mode and custom symbol for non-insert mode.
+
+### Impure modifications
 
 ## Configuration
 
@@ -108,32 +106,19 @@ You can tweak pretty much everything in `pure` by overriding variables in your `
 
 :information_source:: Want more customization? See `$HOME/.config/fish/conf.d/pure.fish` for available variables.
 
-
 ## Tests
 
 **requirements:** [`fishtape`](https://github.com/fisherman/fishtape).
 
     fishtape tests/*.test.fish
 
-## Maintainers
-
-- [Rafael Rinaldi](https://github.com/rafaelrinaldi)
-- [Édouard Lopez](https://github.com/edouard-lopez)
-
-Kudos to all our awesome [:yellow_heart: contributors :yellow_heart:](../..//graphs/contributors)
-
 ## License
 
-MIT © [Rafael Rinaldi](http://rinaldi.io)
+Upstream project (`pure`) is MIT © [Rafael Rinaldi](http://rinaldi.io).
+Changes made in this fork (`impure`) are MIT © [Simon Sigurdhsson](http://github.com/urdh).
 
----
-
-<p align="center">
-<a href="https://buymeacoff.ee/rinaldi" title="Buy me a coffee">Buy me a ☕</a>
-</p>
-
-[travis-link]: https://travis-ci.org/rafaelrinaldi/pure "TravisCI"
-[travis-badge]: https://travis-ci.org/rafaelrinaldi/pure.svg?branch=master
+[travis-link]: https://travis-ci.org/urdh/impure "TravisCI"
+[travis-badge]: https://travis-ci.org/urdh/impure.svg?branch=master
 [fish-2.5]: https://img.shields.io/badge/fish-v2.5.0-007EC7.svg?style=flat-square "Support Fish 2.5"
 [fish-2.6]: https://img.shields.io/badge/fish-v2.6.0-007EC7.svg?style=flat-square "Support Fish 2.6"
 [fish-2.7.1]: https://img.shields.io/badge/fish-v2.7.1-007EC7.svg?style=flat-square "Support Fish 2.7.1"
