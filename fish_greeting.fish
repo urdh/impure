@@ -12,6 +12,6 @@ function fish_greeting --description 'Print the shell greeting'
     echo ""
     echo "  Welcome to $pure_color_info$host$pure_color_normal"
     echo "  Running $pure_color_info$arch$pure_color_normal on $pure_color_info$term$pure_color_normal"
-    echo "  It is $pure_color_info$time$pure_color_normal $zone on $pure_color_info$date$pure_color_normal"
+    echo "  It is $pure_color_info$time$pure_color_normal ($zone) on $pure_color_info$date$pure_color_normal"
     echo ""
 end
