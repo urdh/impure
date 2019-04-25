@@ -58,6 +58,8 @@ function _pure_greeting_system \
                 set os_icon \uf30d
             case linuxmint
                 set os_icon \uf30e
+            case mageia
+                set os_icon \uf310
             case manjaro
                 set os_icon \uf312
             case nixos
@@ -72,17 +74,6 @@ function _pure_greeting_system \
                 set os_icon \uf318
             case ubuntu
                 set os_icon \uf31b
-            case '*'
-                set os_icon \uf31a
-        end
-    else if test -f /etc/lsb-release
-        # Linux distribution with an /etc/lsb-release but no /etc/os-release
-        set os_name (get_variable NAME /etc/os-release)
-        set os_version (get_variable VERSION /etc/os-release)
-        set --local os_id (get_variable ID /etc/os-release)
-        switch "$os_id"
-            case Mageia
-                set os_icon \uf310
             case '*'
                 set os_icon \uf31a
         end
